@@ -162,7 +162,7 @@ Below, we'll solve this problem three different ways, using iterate, scan, and d
 
 **enter answer here**
 
-.  
+.  The recurrences and big O complixities for the work and span will be the same for this solution, since the function is entirely sequential and cannot be parallelized. The recurrences are W(n) = W(n-1) + O(1) and S(n) = S(n-1) + O(1), and since each element is only processed once, the big O complexities are both O(n)
 . 
 
 
