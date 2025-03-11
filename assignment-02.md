@@ -178,7 +178,7 @@ Below, we'll solve this problem three different ways, using iterate, scan, and d
 
 **enter answer here**
 
-.  
+.  Assumimg that any maps are done in parallel, the recurrence for the work of this solution would be W(n) = 2W(n/2) + O(n) which then simplifies to a big O complexity of O(n). The span recurrence would be S(n) = S(n/2) + O(logn), which then simplifies to a big O complexity of O(logn)
 .  
 
 
