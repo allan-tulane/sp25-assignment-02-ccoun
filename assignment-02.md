@@ -1,6 +1,6 @@
 # CMPS 2200 Assignment 2
 
-**Name:**_________________________
+**Name:** Charlie Coun
 
 In this assignment we'll work on applying the methods we've learned to analyze recurrences, and also see their behavior
 in practice. As with previous
@@ -16,7 +16,7 @@ Derive asymptotic upper bounds of work for each recurrence below.
 
 * $W(n)=2W(n/3)+1$
 .  
-.  
+.  The asymptotic upper bound of work is $O(n^{log{_3}{2}})$, as the recurrence is leaf dominated, or dependent on $2W(n/3)$
 . 
 .  
 . 
@@ -26,7 +26,7 @@ Derive asymptotic upper bounds of work for each recurrence below.
 * $W(n)=5W(n/4)+n$
 .  
 .
-.  
+.  The asymptotic upper bound of work is $O(n^{log{_4}{5}})$, as the recurrence is leaf dominated, or dependent on $5W(n/4)$
 . 
 .  
 . 
@@ -36,7 +36,7 @@ Derive asymptotic upper bounds of work for each recurrence below.
 
 * $W(n)=7W(n/7)+n$
 .  
-. 
+. The asymptotic upper bound of work is O(nlogn), as the recurrence is balanced and work (O(n)) is done at each step with recursion depth being O(logn)
 .  
 .  
 . 
@@ -46,7 +46,7 @@ Derive asymptotic upper bounds of work for each recurrence below.
 * $W(n)=9W(n/3)+n^2$
 .  
 .
-. 
+. The asymptotic upper bound of work is $O(n^2logn)$, as the recurrence is balanced and work $(O(n^2))$ is done at each step with recursion depth being O(logn)
 .  
 . 
 .  
@@ -57,7 +57,7 @@ Derive asymptotic upper bounds of work for each recurrence below.
 * $W(n)=8W(n/2)+n^3$
 .  
 .
-.  
+.  The asymptotic upper bound of work is $O(n^3logn)$, as the recurrence is balanced and work $(O(n^3))$ is done at each step with recursion depth being O(logn)
 .  
 .  
 .  
@@ -69,7 +69,7 @@ Derive asymptotic upper bounds of work for each recurrence below.
 * $W(n)=49W(n/25)+n^{3/2}\log n$
 .  
 .  
-. 
+. The asymptotic upper bound of work is $O(n^{3/2}logn)$, as the recurrence is root dominated by the $n^{3/2}\log n$
 .  
 . 
 .  
@@ -79,7 +79,7 @@ Derive asymptotic upper bounds of work for each recurrence below.
 * $W(n)=W(n-1)+2$
 .  
 .  
-. 
+. The asymptotic upper bound of work is O(n), since we can simplify the recurrence down to W(n) = W(1) + 2(n-1), which leads to W(n) = C + n, and we can do all this because it is balanced
 .  
 . 
 .  
@@ -89,7 +89,7 @@ Derive asymptotic upper bounds of work for each recurrence below.
 * $W(n)= W(n-1)+n^c$, with $c\geq 1$
 .  
 .  
-.  
+.  The asymptotic upper bound of work is $O(n^{c+1})$, since the recurrence is leaf dominated as the total work grows faster than thr work at the root level
 .  
 .  
 . 
@@ -99,7 +99,7 @@ Derive asymptotic upper bounds of work for each recurrence below.
 * $W(n)=W(\sqrt{n})+1$
 .  
 .  
-.  
+.  The asymptotic upper bound of work is O(loglogn) since the recurrence is balanced and there is O(1) work done at each of the loglogn levels
 .  
 .  
 . 
