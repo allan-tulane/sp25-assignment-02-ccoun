@@ -199,8 +199,8 @@ Below, we'll solve this problem three different ways, using iterate, scan, and d
 
 **enter answer here**
 
-.  
-. 
+.  The recurrence for the work of this solution would be W(n) = 2W(n/2) + O(1), as with each recursive call, the list is split into 2 subproblems with half the number of elements in each list, and then combined with constant work. This means the big O solution would be O(n) due to the domination of recursive calls. 
+. The recurrence for the span of this solution assuming recursive calls are done in parallel would be S(n) = S(n/2) + O(1) and the big O complexity would be O(logn). This is because the span is dominated by the depth of recursion, which would be $log{_2}{n}$
 
 
  
