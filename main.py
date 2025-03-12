@@ -4,6 +4,8 @@ See assignment-02.md for details.
 """
 from collections import defaultdict
 import math
+from functools import reduce
+
 
 #### Iterative solution
 def parens_match_iterative(mylist):
@@ -23,7 +25,12 @@ def parens_match_iterative(mylist):
     False
     """
     ### TODO
-    return iterate(parens_update, 0, mylist) == 0
+    count = 0
+    for char in mylist:
+        count = parens_update(count, char)
+        if count == -math.inf:
+            return False
+    return count == 0
     ###
 
 
@@ -77,8 +84,9 @@ def parens_match_scan(mylist):
     
     """
     ###TODO
-    history, last = scan(plus, 0, list(map(paren_map, mylist)))
-    return last == 0 and reduce(min_f, 0, history) >= 0
+    mapped_list = list(map(paren_map, mylist))
+    history, last = scan(lambda x, y: x + y, 0, mapped_list)
+    return last == 0 and reduce(min_f, history, 0) >= 0
     ###
 
 def scan(f, id_, a):
@@ -89,8 +97,8 @@ def scan(f, id_, a):
     the more efficient version is used for analyzing work/span.
     """
     return (
-            [reduce(f, id_, a[:i+1]) for i in range(len(a))],
-             reduce(f, id_, a)
+            [reduce(f, a[:i+1], id_) for i in range(len(a))],
+             reduce(f, a, id_)
            )
 
 def paren_map(x):
@@ -151,12 +159,12 @@ def parens_match_dc_helper(mylist):
     ###TODO
     # Base cases
     if len(mylist) == 0:
-        return [0,0]
+        return (0,0)
     elif len(mylist) == 1:
         if mylist[0] == '(':
             return (0, 1) # one unmatched (
         elif mylist[0] == ')':
-            return (1, 0) # one unmatched )    
+            return (1, 0) # one unmatched )
         else:
             return (0, 0)
     i,j = parens_match_dc_helper(mylist[:len(mylist)//2])
@@ -170,4 +178,3 @@ def parens_match_dc_helper(mylist):
         return (i + k - j, l)
     ###
     
-
