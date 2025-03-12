@@ -133,7 +133,7 @@ Suppose that for a given task you are choosing between the following three algor
 .  
 .  C: W(n) = 9W(n/3) + $O(n^2)$ -> $O(n^{2}logn)$
 . 
-. I would choose algorithm C, since $O(n^{2}logn)$
+. I would choose algorithm C, since $n^{2}logn$ grows slower than the other two algorithms ($n^{log{_2}{5}}$ and $2^{n}$), meaning the work will not increase as fast as the number of elements (n) increases. 
 
 
 
@@ -179,7 +179,7 @@ Below, we'll solve this problem three different ways, using iterate, scan, and d
 
 **enter answer here**
 
-.  Assumimg that any maps are done in parallel, the recurrence for the work of this solution would be W(n) = 2W(n/2) + O(n) which then simplifies to a big O complexity of O(n). The span recurrence would be S(n) = S(n/2) + O(logn), which then simplifies to a big O complexity of O(logn)
+.  Assumimg that any maps are done in parallel, the recurrence for the work of this solution would be W(n) = 2W(n/2) + O(n) which then simplifies to a big O complexity of O(nlogn). The span recurrence would be S(n) = S(n/2) + O(logn), which then simplifies to a big O complexity of O(logn)
 .  
 
 
