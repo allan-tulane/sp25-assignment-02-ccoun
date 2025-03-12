@@ -133,7 +133,7 @@ Suppose that for a given task you are choosing between the following three algor
 .  
 .  C: W(n) = 9W(n/3) + $O(n^2)$ -> $O(n^{2}logn)$
 . 
-. I would choose algorithm C, since $n^{2}logn$ grows slower than the other two algorithms ($n^{log{_2}{5}}$ and $2^{n}$), meaning the work will not increase as fast as the number of elements (n) increases. 
+. I would choose algorithm C, since $n^{2}logn$ grows slower than the other two algorithms ($n^{log{_2}{5}}$ and $2^{n}$), meaning the work will not increase as fast when the number of elements (n) increases. 
 
 
 
