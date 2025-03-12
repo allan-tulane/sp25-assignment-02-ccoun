@@ -89,7 +89,7 @@ Derive asymptotic upper bounds of work for each recurrence below.
 * $W(n)= W(n-1)+n^c$, with $c\geq 1$
 .  
 .  
-.  The asymptotic upper bound of work is $O(n^{c+1})$, since the recurrence is leaf dominated as the total work grows faster than the work at the root level
+.  The asymptotic upper bound of work is $O(n^{c})$, since the recurrence is leaf dominated as the total work grows faster than the work at the root level
 .  
 .  
 . 
