@@ -127,12 +127,13 @@ Suppose that for a given task you are choosing between the following three algor
     Which algorithm would you choose?
 
 
+.  A: W(n) = 5W(n/2) + O(n) -> $O(n^{log{_2}{5}})$
 .  
+.  B: W(n) = 2W(n-1) + O(1) -> $O(2^{n})$
 .  
-.  
-.  
+.  C: W(n) = 9W(n/3) + $O(n^2)$ -> $O(n^{2}logn)$
 . 
-. 
+. I would choose algorithm C, since $O(n^{2}logn)$
 
 
 
